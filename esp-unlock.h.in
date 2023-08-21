@@ -1,0 +1,3 @@
+// the configured options and settings for Tutorial
+#define espkey_VERSION_MAJOR @espkey_VERSION_MAJOR@
+#define espkey_VERSION_MINOR @espkey_VERSION_MINOR@

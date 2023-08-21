@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Terminal=false
+Name=ESP-Unlock
+Exec=esp-unlock
+Icon=esp-unlock
+Type=Application
+Categories=Accessories
+Comment=Create one time passwords using an ESP32-C3

@@ -1,0 +1,12 @@
+/build
+test/build
+
+# Package build artifacts
+package/esp-unlock-0.1/esp-unlock
+package/esp-unlock-0.1/debian/.debhelper
+package/esp-unlock-0.1/debian/debhelper-build-stamp
+package/esp-unlock-0.1/debian/files
+package/esp-unlock-0.1/debian/esp-unlock
+package/esp-unlock-0.1/debian/esp-unlock.substvars
+package/esp-unlock_*
+package/esp-unlock-dbgsym_0.1-0_amd64.ddeb

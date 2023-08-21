@@ -1,0 +1,5 @@
+esp-unlock /usr/bin/
+99-esp-unlock.rules /usr/lib/udev/rules.d/
+esp-unlock.desktop /usr/share/applications/
+icons/256/esp-unlock.png /usr/share/icons/hicolor/256x256/apps/
+icons/128/esp-unlock.png /usr/share/icons/hicolor/128x128/apps/

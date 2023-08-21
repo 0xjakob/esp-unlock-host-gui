@@ -1,0 +1,10 @@
+# Create a new unique device node
+
+ACTION=="add", SUBSYSTEM=="usb", ATTRS{idVendor}!="303a", GOTO="esp_unlock_device_end"
+ACTION=="add", SUBSYSTEM=="usb", ATTRS{idVendor}=="303a", ATTRS{idProduct}=="1001", GOTO="esp_unlock_device"
+
+LABEL="esp_unlock_device"
+
+KERNEL=="ttyACM?", OWNER="root", GROUP="dialout", MODE="0666", SYMLINK+="esp-unlock"
+
+LABEL="esp_unlock_device_end"

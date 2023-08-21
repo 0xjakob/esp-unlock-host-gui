@@ -1,0 +1,9 @@
+Source: esp-unlock
+Build-Depends: debhelper (>= 10)
+Maintainer: Jakob Hasse <0xjakob@users.noreply.github.com>
+Standards-Version: 3.9.5
+
+Package: esp-unlock
+Architecture: any
+Description: Create one time passwords using an ESP32-C3.
+ TBD
