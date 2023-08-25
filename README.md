@@ -11,6 +11,7 @@ This app is pretty much a proof-of-concept. It should work if you do not do some
 * Currently, only Linux is supported.
 * A recent C++ compiler with C++20 support.
 * libgtk-3 and related libraries (see CMakeLists.txt for more details).
+* libbaseencode (development version for building)
 
 ## Build
 
