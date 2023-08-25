@@ -198,10 +198,18 @@ gboolean search_hook(gpointer user_data) {
 }
 
 int run_gtk_app(int argc, char *argv[]) {
-    GtkApplication* app = gtk_application_new(
-        nullptr, 
-        G_APPLICATION_DEFAULT_FLAGS
-    );
+    /*
+     * Since version 2.74, the default application flags change
+     * from G_APPLICATION_FLAGS_NONE to G_APPLICATION_DEFAULT_FLAGS,
+     * while G_APPLICATION_FLAGS_NONE are deprecated immediately.
+     * To prevent a compiler warning with newer glib versions, we have this switch.
+     */
+#if GLIB_CHECK_VERSION(2, 74, 0)
+    GApplicationFlags app_flags = G_APPLICATION_DEFAULT_FLAGS;
+#else
+    GApplicationFlags app_flags = G_APPLICATION_FLAGS_NONE;
+#endif
+    GtkApplication* app = gtk_application_new(nullptr, app_flags);
     g_signal_connect(app, "activate", G_CALLBACK(on_app_activate), NULL);
     g_idle_add(search_hook, nullptr);
     std::jthread device_finder(check_for_esp_unlock);
